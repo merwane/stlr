@@ -22,7 +22,7 @@ def create_acc(pubk):
     return {"account": response['_links']['transaction']['href'], "status": "created"}
 
 # creates a transaction
-def create_tx(private_key, receiver, amount, asset_code, asset_code_dest):
+def create_tx(private_key, receiver, amount, asset_code, asset_code_dest, memo):
     source_keypair = Keypair.from_secret(private_key)
     source_public_key = source_keypair.public_key
     source_account = server.load_account(source_public_key)
@@ -41,10 +41,10 @@ def create_tx(private_key, receiver, amount, asset_code, asset_code_dest):
                 source_account=source_account,
                 network_passphrase=Network.TESTNET_NETWORK_PASSPHRASE,
                 base_fee=base_fee
-                ).add_text_memo("Hello Testnet")
+                ).add_text_memo(memo)
                 .append_path_payment_op(receiver, dest_amount=str(amount), 
                     send_code=asset_code, send_issuer=assets[asset_code],
-                    send_max="1000", dest_code=asset_code_dest,
+                    send_max="100000", dest_code=asset_code_dest,
                     dest_issuer=assets[asset_code_dest],
                     path=path
                     )

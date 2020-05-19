@@ -10,6 +10,8 @@ flask-restful = "*"
 python-dotenv = "*"
 flask-cors = "*"
 stellar-sdk = "==2.4.1"
+twilio = "*"
+mongoengine = "*"
 
 [requires]
 python_version = "3.6"
