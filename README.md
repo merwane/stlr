@@ -6,6 +6,18 @@
 
 The API uses Twilio for sending messages and MongoDB for storing pending operations consistently.
 
+Workflow:
+---------------
+Here's the workflow for sending money to someone via an SMS:
+
+**Sender:**
+- The sender enters the recipient's phone number.
+- The sender sends the desired amount (in XLM) to a generated address.
+
+**Recipient:**
+- The recipient receives a unique URL via sms.
+- The recipient can use the url to claim the funds by entering a Stellar address and selecting a currency once he has an Internet access.
+
 Usage:
 ---------------
 Here's a video I made explaining how the service works.
@@ -45,3 +57,9 @@ python main.py
 Launch the client by cloning [this repository](https://github.com/merwane/stlr-client) and following the instructions on the README file.
 
 Once the client and the server are running, you can start using the service by visiting [localhost:3000](http://localhost:3000/)
+
+Ideas:
+---------------
+- This can be monetized by substracting a tiny fraction as a commission for each transfer.
+- A built-in exchange would facilitate withdrawals for recipients.
+- User accounts to keep track of withdrawals.
