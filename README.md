@@ -18,12 +18,6 @@ Here's the workflow for sending money to someone via an SMS:
 - The recipient receives a unique URL via sms.
 - The recipient can use the url to claim the funds by entering a Stellar address and selecting a currency once he has an Internet access.
 
-Usage:
----------------
-Here's a video I made explaining how the service works.
-
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/08FiCiACoGM/0.jpg)](https://www.youtube.com/watch?v=08FiCiACoGM)
-
 Instructions:
 ---------------
 
